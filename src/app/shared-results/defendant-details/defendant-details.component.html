@@ -1,0 +1,24 @@
+@for (def of defendant(); track def.id) {
+  @if (def?.personDefendant?.personDetails) {
+    <section aria-labelledby="defendant-details">
+      <h2 pdk-typography="heading-medium" class="hearing-results" id="defendant-details">
+        {{ 'DEFENDANT_DETAILS' | translate | capitalize: true }}
+      </h2>
+      <h3 pdk-typography="body-lead" pdk-margin-bottom="1" data-test-id="defendantName">
+        {{ def?.personDefendant?.personDetails | fullName }}
+      </h3>
+      <div class="age">
+        {{ def?.personDefendant?.personDetails?.dateOfBirth | age }}
+        <span>{{ 'YEARS_OLD' | translate }}</span>
+      </div>
+      <div>
+        <span>{{ 'BORN' | translate | capitalize }}</span
+        >&nbsp;
+        <time>{{ def?.personDefendant?.personDetails.dateOfBirth | cppDate }}</time>
+      </div>
+      <div class="defendant-address">
+        {{ def?.personDefendant?.personDetails?.address | address }}
+      </div>
+    </section>
+  }
+}

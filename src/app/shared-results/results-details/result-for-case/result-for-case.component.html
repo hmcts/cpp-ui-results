@@ -1,0 +1,160 @@
+<section aria-labelledby="results-details-caseurn">
+  <h3 pdk-typography="heading-medium" id="results-details-caseurn">
+    <span pdk-margin-right="1">{{ 'RESULT_FOR_CASE' | translate | capitalize }}</span>
+    <span data-test-id="urn">{{ case()?.prosecutionCaseIdentifier?.caseURN }}</span>
+  </h3>
+  @for (caseLevelResult of case().defendants[0]?.judicialResults; let index = $index; track index) {
+    <div pdk-margin-top="2">
+      @if (caseLevelResult.isDeleted !== true) {
+        <div>
+          <div pdk-text-colour="dark-grey" pdk-typography="heading-small">
+            {{ caseLevelResult.label }}
+          </div>
+          @for (prompt of caseLevelResult.judicialResultPrompts; let index = $index; track index) {
+            <div>
+              <span>{{ prompt.label }}</span>
+              @if (prompt.value) {
+                <span>: {{ prompt.value }}</span>
+              }
+            </div>
+          }
+          @if (caseLevelResult.orderedDate) {
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+              <span>Result/Order made on</span>{{ caseLevelResult.orderedDate | cppDate }}
+            </div>
+          }
+          @if (caseLevelResult.amendmentDate) {
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+              <span>Date of amendment</span>{{ caseLevelResult.amendmentDate | cppDate }}
+            </div>
+          }
+          @if (caseLevelResult.lastSharedDate) {
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+              <span>Shared on</span> {{ caseLevelResult.lastSharedDate | cppDate }}
+            </div>
+          }
+          @if (caseLevelResult.amendmentReason) {
+            <div>
+              <uicore-collapsible
+                [collapsedButtonText]="'REASON_COLLAPSIBLE.VIEW_REASON' | translate"
+                [uncollapsedButtonText]="'REASON_COLLAPSIBLE.HIDE_REASON' | translate"
+                [showChangeButton]="false"
+                [isCollapsedInput]="true"
+                [warning]="true"
+              >
+                <p>
+                  {{ caseLevelResult.amendmentReason }}
+                </p>
+              </uicore-collapsible>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  }
+  @for (offence of case().defendants[0].offences; let i = $index; track offence.id) {
+    <pdk-grid container pdk-margin-top="2" data-test-id="offence">
+      <pdk-grid one-half>
+        <div class="pull-left">{{ i + 1 }}</div>
+        <div pdk-typography="heading-small" style="padding-left: 1.2em">
+          <div>
+            <span data-test-id="offenceTitle">{{ offence.offenceTitle }}</span>
+            {{ offence.wording }}
+          </div>
+          <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+            <span>on</span> {{ offence.startDate | cppDate }}
+          </div>
+        </div>
+      </pdk-grid>
+      <pdk-grid one-half>
+        @if (offence?.plea) {
+          <div pdk-margin-top="3">
+            <div pdk-typography="heading-small">{{ 'PLEA' | translate | capitalize }}</div>
+            <div>{{ offence.plea.pleaValue | translate | capitalize }}</div>
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+              <span>on</span> {{ offence?.plea.pleaDate | cppDate }}
+            </div>
+          </div>
+        }
+        @if (offence.verdict) {
+          <div pdk-margin-top="3">
+            <div pdk-typography="heading-small">{{ 'VERDICT' | translate | capitalize }}</div>
+            <div>{{ offence.verdict.verdictType.category }}</div>
+            @if (offence.verdict.verdictType) {
+              <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+                <span>on</span> {{ offence.verdict.verdictDate | cppDate }}
+              </div>
+            }
+          </div>
+        }
+        @if (offence?.convictionDate) {
+          <div pdk-margin-top="3">
+            <div pdk-typography="heading-small">{{ 'CONVICTION' | translate | capitalize }}</div>
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+              <span>on</span> {{ offence?.convictionDate | cppDate }}
+            </div>
+          </div>
+        }
+        @if (offence?.judicialResults?.length > 0) {
+          <div pdk-margin-top="3">
+            <div pdk-typography="heading-small">{{ 'RESULTS' | translate | capitalize }}</div>
+            @for (result of offence.judicialResults; let index = $index; track index) {
+              <div data-test-id="judicialResult">
+                @if (result.isDeleted !== true) {
+                  <div>
+                    <div
+                      pdk-typography="heading-small"
+                      pdk-text-colour="dark-grey"
+                      data-test-id="judicialResultLabel"
+                    >
+                      {{ result.label }}
+                    </div>
+                    @for (prompt of result.judicialResultPrompts; let index = $index; track index) {
+                      <p>
+                        <span pdk-margin-right="1">{{ prompt.label }}:</span>
+                        @if (prompt.value) {
+                          <span>{{ prompt.value }}</span>
+                        }
+                      </p>
+                    }
+                    @if (result.orderedDate) {
+                      <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+                        <span>Result/Order made on</span> {{ result.orderedDate | cppDate }}
+                      </div>
+                    }
+                    @if (result.amendmentDate) {
+                      <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+                        <span>Date of amendment</span> {{ result.amendmentDate | cppDate }}
+                      </div>
+                    }
+                    @if (result.lastSharedDateTime) {
+                      <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey">
+                        <span>Shared on</span> {{ result.lastSharedDateTime | cppDate }}
+                      </div>
+                    }
+                    @if (result.amendmentReason) {
+                      <div>
+                        <uicore-collapsible
+                          [collapsedButtonText]="'REASON_COLLAPSIBLE.VIEW_REASON' | translate"
+                          [uncollapsedButtonText]="'REASON_COLLAPSIBLE.HIDE_REASON' | translate"
+                          [showChangeButton]="false"
+                          [isCollapsedInput]="true"
+                          [warning]="true"
+                        >
+                          <p>
+                            {{ result.amendmentReason }}
+                          </p>
+                        </uicore-collapsible>
+                      </div>
+                    }
+                  </div>
+                }
+                <br />
+              </div>
+            }
+          </div>
+        }
+      </pdk-grid>
+    </pdk-grid>
+  }
+</section>

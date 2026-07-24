@@ -1,0 +1,6 @@
+// to be removed once fixed on PDK
+*,
+::after,
+::before {
+  box-sizing: unset;
+}

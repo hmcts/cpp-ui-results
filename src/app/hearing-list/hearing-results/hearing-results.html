@@ -1,0 +1,45 @@
+<pdk-grid container class="hearing-results">
+  @if (hearings().length) {
+  <legend pdk-typography="heading-medium" pdk-text-colour="dark-grey" class="float-right">
+    {{ hearings().length }} hearings
+  </legend>
+  } @if (hearings().length) {
+  <table pdk-table class="table table-hover">
+    <thead pdk-table-head>
+      <tr pdk-table-row>
+        <th pdk-table-header scope="col">{{'DEFENDANT' | translate | capitalize}}</th>
+        <th pdk-table-header scope="col">{{'HEARING' | translate | capitalize}}</th>
+        <th pdk-table-header scope="col">{{'DATE' | translate | capitalize}}</th>
+      </tr>
+    </thead>
+    <tbody pdk-table-body>
+      @for (hearing of hearings(); let index=$index; track index;) {
+      <tr
+        data-test-id="hearingResult"
+        pdk-table-row
+        (click)="onResultsClick( { hearingId: hearing.hearingId, defendantId: hearing.defendant.personId })"
+      >
+        <td data-test-id="hearingInfo" pdk-table-cell>
+          <a
+            class="defendant-name-link"
+            title="Available results for {{ hearing.defendant | fullName: true }}"
+            (click)="onResultsClick( { defendantId: hearing.defendant.personId, hearingId: hearing.hearingId })"
+          >
+            {{hearing.defendant | fullName: true}} @for (urn of hearing.urns; let index=$index;
+            track index;) {
+            <div pdk-typography="body-xsmall" pdk-text-colour="dark-grey" pdk-margin-top="1">
+              {{'URN' | translate | uppercase}} {{urn}}
+            </div>
+            }
+          </a>
+        </td>
+        <td pdk-table-cell data-test-id="hearingType">{{hearing.hearingType || 'PTP' }}</td>
+        <td pdk-table-cell data-test-id="hearingDate">{{hearing.hearingDate | cppDate}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (!hearings().length) {
+  <p pdk-typography="body-medium">{{'NO_RESULTS_AVAILABLE' | translate | capitalize}}</p>
+  }
+</pdk-grid>

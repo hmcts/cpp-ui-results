@@ -1,0 +1,19 @@
+.content-container {
+  padding: 15px;
+  border-top: 1px solid;
+  border-bottom: 3px solid;
+
+  &.collapsed {
+    padding: 0;
+  }
+
+  &.warning {
+    background-color: #efcfd1;
+    border-top-color: #b10e1e;
+    border-bottom-color: #b10e1e;
+  }
+}
+
+.text-right {
+  text-align: right;
+}

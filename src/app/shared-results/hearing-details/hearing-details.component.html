@@ -1,0 +1,58 @@
+<section aria-labelledby="hearing-details" pdk-margin-bottom="3">
+  <h2 pdk-typography="heading-medium" pdk-margin-top="3" id="hearing-details">
+    {{ 'HEARING_DETAILS' | translate | capitalize }}
+  </h2>
+  <div>
+    <span pdk-margin-right="1">{{ 'HEARD_AT' | translate | capitalize }}</span>
+    <span pdk-text-colour="dark-grey" class="court-name" data-role="court-name">{{
+      hearing()?.courtCentre?.name
+    }}</span>
+  </div>
+  <div pdk-typography="body-xsmall" pdk-margin-bottom="1" class="court-code">
+    <span pdk-margin-right="1">{{ 'COURT_ROOM' | translate | capitalize }}</span>
+    <span pdk-text-colour="dark-grey">{{ hearing()?.courtCentre?.roomName }}</span>
+  </div>
+  <div pdk-typography="body-xsmall" pdk-margin-bottom="1">
+    <span pdk-margin-right="1">{{ 'ON' | translate | capitalize }}</span>
+    <time pdk-text-colour="dark-grey">{{ sharedTime() | cppDate }}</time>
+  </div>
+  @if (hearing()?.judiciary) {
+    <dl pdk-typography="body-xsmall" class="meta meta-inline meta-small">
+      <!--JUDGE -->
+      @if ((hearing()?.judiciary)[0]?.title) {
+        <dt pdk-text-colour="dark-grey">
+          {{ 'JUDGE' | translate | capitalize }}
+        </dt>
+        <dd>
+          {{ (hearing()?.judiciary)[0]?.title }} {{ (hearing()?.judiciary)[0]?.firstName }}
+          {{ (hearing()?.judiciary)[0]?.middleName }} {{ (hearing()?.judiciary)[0]?.lastName }}
+        </dd>
+      }
+      <!--PROSECUTOR -->
+      @if (hearing()?.prosecutionCounsels) {
+        <dt pdk-text-colour="dark-grey">{{ 'PROSECUTOR' | translate | capitalize }}</dt>
+
+        @for (prosecCounsel of hearing()?.prosecutionCounsels; track prosecCounsel.id) {
+          <dd>{{ prosecCounsel.firstName }} {{ prosecCounsel.lastName }}</dd>
+        }
+      }
+      <!--DEFENCE -->
+      @if (hearing()?.defenceCounsels) {
+        <dt pdk-text-colour="dark-grey">{{ 'DEFENCE' | translate | capitalize }}</dt>
+        @for (defenseCounsel of hearing()?.defenceCounsels; track defenseCounsel.id) {
+          <dd>{{ defenseCounsel.firstName }} {{ defenseCounsel.lastName }}</dd>
+        }
+      }
+      <!--CLERKS -->
+      @if (hearing()?.sharedResultLines) {
+        @for (resultLine of hearing()?.sharedResultLines; track resultLine.courtClerk.userId) {
+          <dt pdk-text-colour="dark-grey">{{ 'CLERK' | translate | capitalize }}</dt>
+          <dd>
+            {{ resultLine?.courtClerk?.firstName }}
+            {{ resultLine?.courtClerk?.lastName | uppercase }}
+          </dd>
+        }
+      }
+    </dl>
+  }
+</section>

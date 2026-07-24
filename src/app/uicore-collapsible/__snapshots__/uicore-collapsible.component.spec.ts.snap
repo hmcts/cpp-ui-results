@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UiCoreCollapsibleComponent should compile correctly 1`] = `
+<uicore-collapsible-test
+  collapsedButtonText={[Function String]}
+  uncollapsedButtonText={[Function String]}
+>
+  <uicore-collapsible>
+    <div>
+      <div
+        class="text-right"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          <span>
+             Hide reason 
+          </span>
+        </a>
+      </div>
+      <div
+        class="content-container"
+      >
+        <div>
+          <strong>
+            Reason for change
+          </strong>
+          <p>
+            body text...
+          </p>
+        </div>
+      </div>
+    </div>
+  </uicore-collapsible>
+</uicore-collapsible-test>
+`;
+
+exports[`UiCoreCollapsibleComponent when it is collapsed has the correct collapsed button text 1`] = `
+<uicore-collapsible-test
+  collapsedButtonText={[Function String]}
+  isCollapsedInput={[Function Boolean]}
+  uncollapsedButtonText={[Function String]}
+>
+  <uicore-collapsible>
+    <div>
+      <div
+        class="text-right"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          <span>
+             Show Reason 
+          </span>
+        </a>
+      </div>
+      <div
+        class="content-container collapsed"
+      >
+        <div
+          hidden=""
+        >
+          <strong>
+            Reason for change
+          </strong>
+          <p>
+            body text...
+          </p>
+        </div>
+      </div>
+    </div>
+  </uicore-collapsible>
+</uicore-collapsible-test>
+`;
+
+exports[`UiCoreCollapsibleComponent when it is not collapsed has the correct close button text 1`] = `
+<uicore-collapsible-test
+  collapsedButtonText={[Function String]}
+  isCollapsedInput="false"
+  uncollapsedButtonText={[Function String]}
+>
+  <uicore-collapsible>
+    <div>
+      <div
+        class="text-right"
+      >
+        <a
+          href="javascript:void(0);"
+        >
+          <span>
+             Hide reason 
+          </span>
+        </a>
+      </div>
+      <div
+        class="content-container"
+      >
+        <div>
+          <strong>
+            Reason for change
+          </strong>
+          <p>
+            body text...
+          </p>
+        </div>
+      </div>
+    </div>
+  </uicore-collapsible>
+</uicore-collapsible-test>
+`;
