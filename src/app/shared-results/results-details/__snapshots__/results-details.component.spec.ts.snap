@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsDetailsComponent should render the template with the values expected 1`] = `
+<results-details
+  prosecutionCases={[Function Function]}
+>
+  <result-for-case>
+    <section
+      aria-labelledby="results-details-caseurn"
+    >
+      <h3
+        class="govuk-heading-m"
+        id="results-details-caseurn"
+        pdk-typography="heading-medium"
+      >
+        <span
+          class="govuk-!-margin-right-1"
+          pdk-margin-right="1"
+        >
+          RESULT_FOR_CASE
+        </span>
+        <span
+          data-test-id="urn"
+        >
+          96GD6503919
+        </span>
+      </h3>
+      <pdk-grid
+        class="govuk-!-margin-top-2 govuk-grid-row"
+        container=""
+        data-test-id="offence"
+        pdk-margin-top="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-half"
+          one-half=""
+        >
+          <div
+            class="pull-left"
+          >
+            1
+          </div>
+          <div
+            class="govuk-heading-s"
+            pdk-typography="heading-small"
+            style="padding-left: 1.2em;"
+          >
+            <div>
+              <span
+                data-test-id="offenceTitle"
+              >
+                Wound / inflict grievous bodily harm without intent
+              </span>
+               on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith 
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               1 August 2010 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-one-half"
+          one-half=""
+        >
+          <div
+            class="govuk-!-margin-top-3"
+            pdk-margin-top="3"
+          >
+            <div
+              class="govuk-heading-s"
+              pdk-typography="heading-small"
+            >
+              PLEA
+            </div>
+            <div>
+              GUILTY
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               4 June 2019 
+            </div>
+          </div>
+          <div
+            class="govuk-!-margin-top-3"
+            pdk-margin-top="3"
+          >
+            <div
+              class="govuk-heading-s"
+              pdk-typography="heading-small"
+            >
+              CONVICTION
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               4 June 2019 
+            </div>
+          </div>
+          <div
+            class="govuk-!-margin-top-3"
+            pdk-margin-top="3"
+          >
+            <div
+              class="govuk-heading-s"
+              pdk-typography="heading-small"
+            >
+              RESULTS
+            </div>
+            <div
+              data-test-id="judicialResult"
+            >
+              <div>
+                <div
+                  class="pdk-!-text-color-dark-grey govuk-heading-s"
+                  data-test-id="judicialResultLabel"
+                  pdk-text-colour="dark-grey"
+                  pdk-typography="heading-small"
+                >
+                   Restraining order for period 
+                </div>
+                <p>
+                  <span
+                    class="govuk-!-margin-right-1"
+                    pdk-margin-right="1"
+                  >
+                    Protected person:
+                  </span>
+                  <span>
+                    John Smith
+                  </span>
+                </p>
+                <p>
+                  <span
+                    class="govuk-!-margin-right-1"
+                    pdk-margin-right="1"
+                  >
+                    Protected persons address:
+                  </span>
+                  <span>
+                    Flat 5, Holborn Street
+                  </span>
+                </p>
+                <p>
+                  <span
+                    class="govuk-!-margin-right-1"
+                    pdk-margin-right="1"
+                  >
+                    Order details:
+                  </span>
+                  <span>
+                    No Order Details
+                  </span>
+                </p>
+                <p>
+                  <span
+                    class="govuk-!-margin-right-1"
+                    pdk-margin-right="1"
+                  >
+                    Period of order:
+                  </span>
+                  <span>
+                    10 Years, 0 Months, 0 Weeks, 0 Days
+                  </span>
+                </p>
+                <p>
+                  <span
+                    class="govuk-!-margin-right-1"
+                    pdk-margin-right="1"
+                  >
+                    Conviction / acquittal:
+                  </span>
+                  <span>
+                    Convicted
+                  </span>
+                </p>
+                <div
+                  class="pdk-!-text-color-dark-grey govuk-body-xs"
+                  pdk-text-colour="dark-grey"
+                  pdk-typography="body-xsmall"
+                >
+                  <span>
+                    Result/Order made on
+                  </span>
+                   4 June 2019 
+                </div>
+                <div
+                  class="pdk-!-text-color-dark-grey govuk-body-xs"
+                  pdk-text-colour="dark-grey"
+                  pdk-typography="body-xsmall"
+                >
+                  <span>
+                    Shared on
+                  </span>
+                   15 January 2019 
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+      <pdk-grid
+        class="govuk-!-margin-top-2 govuk-grid-row"
+        container=""
+        data-test-id="offence"
+        pdk-margin-top="2"
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-half"
+          one-half=""
+        >
+          <div
+            class="pull-left"
+          >
+            2
+          </div>
+          <div
+            class="govuk-heading-s"
+            pdk-typography="heading-small"
+            style="padding-left: 1.2em;"
+          >
+            <div>
+              <span
+                data-test-id="offenceTitle"
+              >
+                Wound / inflict grievous bodily harm without intent
+              </span>
+               on 01/08/2009 at  the County public house, unlawfully and maliciously wounded, John Smith 
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               1 August 2010 
+            </div>
+          </div>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-one-half"
+          one-half=""
+        >
+          <div
+            class="govuk-!-margin-top-3"
+            pdk-margin-top="3"
+          >
+            <div
+              class="govuk-heading-s"
+              pdk-typography="heading-small"
+            >
+              PLEA
+            </div>
+            <div>
+              GUILTY
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               4 June 2019 
+            </div>
+          </div>
+          <div
+            class="govuk-!-margin-top-3"
+            pdk-margin-top="3"
+          >
+            <div
+              class="govuk-heading-s"
+              pdk-typography="heading-small"
+            >
+              CONVICTION
+            </div>
+            <div
+              class="pdk-!-text-color-dark-grey govuk-body-xs"
+              pdk-text-colour="dark-grey"
+              pdk-typography="body-xsmall"
+            >
+              <span>
+                on
+              </span>
+               4 June 2019 
+            </div>
+          </div>
+        </pdk-grid>
+      </pdk-grid>
+    </section>
+  </result-for-case>
+</results-details>
+`;

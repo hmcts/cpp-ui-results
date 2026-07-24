@@ -1,0 +1,31 @@
+$path: '/assets/images/';
+
+$module: 'hearing-results';
+
+.#{$module} {
+  .table-hover {
+    > tbody > tr > td {
+      vertical-align: top;
+
+      & > a {
+        text-decoration: none;
+      }
+    }
+    > tbody > tr:hover > td {
+      background-color: #1d70b8;
+      color: #fff;
+      cursor: pointer;
+
+      a {
+        color: #fff;
+        & > div[pdk-typography='body-xsmall'] {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+
+  .float-right {
+    float: right;
+  }
+}

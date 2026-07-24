@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefendantDetailsComponent should render the template with the values expected 1`] = `
+<test-defendant-details
+  defendant={[Function Array]}
+>
+  <defendant-details>
+    <section
+      aria-labelledby="defendant-details"
+    >
+      <h2
+        class="hearing-results govuk-heading-m"
+        id="defendant-details"
+        pdk-typography="heading-medium"
+      >
+         DEFENDANT_DETAILS 
+      </h2>
+      <h3
+        class="govuk-!-margin-bottom-1 govuk-body-l"
+        data-test-id="defendantName"
+        pdk-margin-bottom="1"
+        pdk-typography="body-lead"
+      >
+         Marty Upton 
+      </h3>
+      <div
+        class="age"
+      >
+         43 
+        <span>
+          YEARS_OLD
+        </span>
+      </div>
+      <div>
+        <span>
+          BORN
+        </span>
+        <time>
+          23 May 1983
+        </time>
+      </div>
+      <div
+        class="defendant-address"
+      >
+         222 Furze Road, Exeter, England, UK 
+      </div>
+    </section>
+  </defendant-details>
+</test-defendant-details>
+`;

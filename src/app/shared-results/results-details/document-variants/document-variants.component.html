@@ -1,0 +1,33 @@
+@if (documentIndices()?.length > 0) {
+  <section>
+    <hr pdk-margin-bottom="2" />
+    <pdk-grid one-half>
+      <h2
+        pdk-typography="heading-medium"
+        pdk-margin-bottom="1"
+        pdk-margin-top="3"
+        id="document-details"
+      >
+        {{ 'DOCUMENTS' | translate | capitalize }}
+      </h2>
+    </pdk-grid>
+    <pdk-grid one-half pdk-margin-bottom="1" pdk-margin-top="3">
+      @for (documentIndice of documentIndices(); let index = $index; track index) {
+        <div>
+          <pdk-file-download-icon></pdk-file-download-icon>
+          <strong>
+            <a
+              data-role="document-link"
+              pdk-typography="heading-small"
+              pdk-link
+              href="javascript:void(0);"
+              (click)="onDownloadDocument(documentIndice.document.materials[0].id)"
+            >
+              {{ documentIndice.document.materials[0].name }}
+            </a>
+          </strong>
+        </div>
+      }
+    </pdk-grid>
+  </section>
+}

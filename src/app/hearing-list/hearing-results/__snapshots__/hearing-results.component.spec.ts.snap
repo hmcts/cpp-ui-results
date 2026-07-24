@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HearingResultsComponent should render the template with the values expected 1`] = `
+<ng-component
+  hearings={[Function Array]}
+>
+  <hearing-results>
+    <pdk-grid
+      class="hearing-results govuk-grid-row"
+      container=""
+    >
+      <legend
+        class="float-right pdk-!-text-color-dark-grey govuk-heading-m"
+        pdk-text-colour="dark-grey"
+        pdk-typography="heading-medium"
+      >
+         1 hearings 
+      </legend>
+      <table
+        class="table table-hover govuk-table"
+        pdk-table=""
+      >
+        <thead
+          class="govuk-table__head"
+          pdk-table-head=""
+        >
+          <tr
+            class="govuk-table__row"
+            pdk-table-row=""
+          >
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              DEFENDANT
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              HEARING
+            </th>
+            <th
+              class="govuk-table__cell"
+              pdk-table-header=""
+              scope="col"
+            >
+              DATE
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="govuk-table__body"
+          pdk-table-body=""
+        >
+          <tr
+            class="govuk-table__row"
+            data-test-id="hearingResult"
+            pdk-table-row=""
+          >
+            <td
+              class="govuk-table__cell"
+              data-test-id="hearingInfo"
+              pdk-table-cell=""
+            >
+              <a
+                class="defendant-name-link"
+                title="Available results for Gail ROSE"
+              >
+                 Gail ROSE 
+                <div
+                  class="govuk-!-margin-top-1 pdk-!-text-color-dark-grey govuk-body-xs"
+                  pdk-margin-top="1"
+                  pdk-text-colour="dark-grey"
+                  pdk-typography="body-xsmall"
+                >
+                   URN 96GD5317818 
+                </div>
+              </a>
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-test-id="hearingType"
+              pdk-table-cell=""
+            >
+              TRIAL
+            </td>
+            <td
+              class="govuk-table__cell"
+              data-test-id="hearingDate"
+              pdk-table-cell=""
+            >
+              6 February 2018
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </pdk-grid>
+  </hearing-results>
+</ng-component>
+`;

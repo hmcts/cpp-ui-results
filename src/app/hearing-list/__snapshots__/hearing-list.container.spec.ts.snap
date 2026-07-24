@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HearingListContainer should render the template with the values expected 1`] = `
+<ng-component>
+  <hearing-list>
+    <div
+      class="govuk-!-margin-top-6 govuk-!-margin-bottom-6 govuk-width-container"
+      pdk-container=""
+      pdk-margin-bottom="6"
+      pdk-margin-top="6"
+      style="display: block;"
+    >
+      <h1
+        class="govuk-heading-xl"
+        pdk-typography="heading-xlarge"
+      >
+        AVAILABLE_HEARING_RESULTS
+      </h1>
+      <pdk-grid
+        class="govuk-grid-row"
+        container=""
+      >
+        <pdk-grid
+          class="govuk-grid-column-one-third"
+          one-third=""
+        >
+          <hearing-results-filter>
+            <div
+              class="hearing-results-filter"
+            >
+              <fieldset>
+                <legend
+                  class="govuk-!-margin-bottom-1 govuk-heading-m"
+                  pdk-margin-bottom="1"
+                  pdk-typography="heading-medium"
+                >
+                   FILTER_BY 
+                </legend>
+                <div>
+                  <form
+                    class="ng-untouched ng-pristine ng-valid"
+                    novalidate=""
+                    pdk-form=""
+                  >
+                    <pdk-form-field
+                      id="dateFilter"
+                      label="Date"
+                    >
+                      <pdk-form-group
+                        class="pdk-form-group"
+                      >
+                        <label
+                          class="govuk-label"
+                          for="pdk-select-GENERATED_ID"
+                        >
+                           Date 
+                        </label>
+                        <pdk-select
+                          class="ng-untouched ng-pristine ng-valid"
+                          fullwidth=""
+                          name="dateFilter"
+                        >
+                          <select
+                            class="govuk-select"
+                            id="pdk-select-GENERATED_ID"
+                            name="dateFilter"
+                          >
+                            <option
+                              value="1"
+                            >
+                               Last month 
+                            </option>
+                            <option
+                              value="2"
+                            >
+                               Last 2 months 
+                            </option>
+                            <option
+                              value="3"
+                            >
+                               Last 3 months 
+                            </option>
+                            <option
+                              value="6"
+                            >
+                               Last 6 months 
+                            </option>
+                            <option
+                              value="9"
+                            >
+                               Last 9 months 
+                            </option>
+                            <option
+                              value="12"
+                            >
+                               Last 12 months 
+                            </option>
+                            <option
+                              value="15"
+                            >
+                               Last 15 months 
+                            </option>
+                            <option
+                              value="18"
+                            >
+                               Last 18 months 
+                            </option>
+                            <option
+                              value="21"
+                            >
+                               Last 21 months 
+                            </option>
+                            <option
+                              value="24"
+                            >
+                               Last 24 months 
+                            </option>
+                          </select>
+                        </pdk-select>
+                      </pdk-form-group>
+                    </pdk-form-field>
+                    <pdk-form-field
+                      id="courtHouseFilter"
+                      label="Court house"
+                    >
+                      <pdk-form-group
+                        class="pdk-form-group"
+                      >
+                        <label
+                          class="govuk-label"
+                          for="pdk-form-control-undefined-GENERATED_ID"
+                        >
+                           Court house 
+                        </label>
+                        <cpp-organisation-unit-autosuggest
+                          class="ng-untouched ng-pristine ng-valid"
+                          name="organisationUnit"
+                          ngmodel=""
+                        >
+                          <pdk-autosuggest-lite>
+                            <pdk-autosuggest
+                              highlightcolor="blue"
+                            >
+                              <pdk-interaction-container>
+                                <div>
+                                  <div
+                                    class="pdk-autosuggest"
+                                  >
+                                    <input
+                                      aria-autocomplete="list"
+                                      aria-controls="pdk-autosuggest__suggestions-container-GENERATED_ID-listbox"
+                                      aria-describedby="pdk-autosuggest__instructions-GENERATED_ID"
+                                      aria-expanded="false"
+                                      autocomplete="off"
+                                      class="pdk-autosuggest__input ng-untouched ng-pristine ng-valid govuk-input"
+                                      id="pdk-form-control-undefined-GENERATED_ID"
+                                      role="combobox"
+                                      type="text"
+                                    />
+                                    <span
+                                      class="govuk-visually-hidden"
+                                      id="pdk-autosuggest__instructions-GENERATED_ID"
+                                      pdk-visually-hidden=""
+                                    >
+                                       When autocomplete results are available, use the up and down arrows to review and Enter to select. Touch device users, explore options with swipe gestures. 
+                                    </span>
+                                    <span
+                                      aria-live="polite"
+                                      class="govuk-visually-hidden"
+                                      pdk-visually-hidden=""
+                                      role="status"
+                                    >
+                                    </span>
+                                    <div
+                                      class="pdk-autosuggest__suggestions-container"
+                                      id="pdk-autosuggest__suggestions-container-GENERATED_ID"
+                                    >
+                                    </div>
+                                  </div>
+                                </div>
+                              </pdk-interaction-container>
+                            </pdk-autosuggest>
+                          </pdk-autosuggest-lite>
+                        </cpp-organisation-unit-autosuggest>
+                      </pdk-form-group>
+                    </pdk-form-field>
+                  </form>
+                </div>
+              </fieldset>
+            </div>
+          </hearing-results-filter>
+        </pdk-grid>
+        <pdk-grid
+          class="govuk-grid-column-two-thirds"
+          two-thirds=""
+        >
+          <hearing-results>
+            <pdk-grid
+              class="hearing-results govuk-grid-row"
+              container=""
+            >
+              <p
+                class="govuk-body-m"
+                pdk-typography="body-medium"
+              >
+                NO_RESULTS_AVAILABLE
+              </p>
+            </pdk-grid>
+          </hearing-results>
+        </pdk-grid>
+      </pdk-grid>
+    </div>
+  </hearing-list>
+</ng-component>
+`;

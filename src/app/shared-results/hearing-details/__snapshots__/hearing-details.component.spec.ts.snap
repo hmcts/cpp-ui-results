@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HearingDetailsComponent should render the template with the values expected 1`] = `
+<hearing-details
+  hearing={[Function Function]}
+  sharedTime={[Function Function]}
+>
+  <section
+    aria-labelledby="hearing-details"
+    class="govuk-!-margin-bottom-3"
+    pdk-margin-bottom="3"
+  >
+    <h2
+      class="govuk-!-margin-top-3 govuk-heading-m"
+      id="hearing-details"
+      pdk-margin-top="3"
+      pdk-typography="heading-medium"
+    >
+       HEARING_DETAILS 
+    </h2>
+    <div>
+      <span
+        class="govuk-!-margin-right-1"
+        pdk-margin-right="1"
+      >
+        HEARD_AT
+      </span>
+      <span
+        class="court-name pdk-!-text-color-dark-grey"
+        data-role="court-name"
+        pdk-text-colour="dark-grey"
+      >
+        Liverpool Crown Court
+      </span>
+    </div>
+    <div
+      class="court-code govuk-!-margin-bottom-1 govuk-body-xs"
+      pdk-margin-bottom="1"
+      pdk-typography="body-xsmall"
+    >
+      <span
+        class="govuk-!-margin-right-1"
+        pdk-margin-right="1"
+      >
+        COURT_ROOM
+      </span>
+      <span
+        class="pdk-!-text-color-dark-grey"
+        pdk-text-colour="dark-grey"
+      >
+        Crown Court 5-3
+      </span>
+    </div>
+    <div
+      class="govuk-!-margin-bottom-1 govuk-body-xs"
+      pdk-margin-bottom="1"
+      pdk-typography="body-xsmall"
+    >
+      <span
+        class="govuk-!-margin-right-1"
+        pdk-margin-right="1"
+      >
+        ON
+      </span>
+      <time
+        class="pdk-!-text-color-dark-grey"
+        pdk-text-colour="dark-grey"
+      >
+      </time>
+    </div>
+    <dl
+      class="meta meta-inline meta-small govuk-body-xs"
+      pdk-typography="body-xsmall"
+    >
+      <dt
+        class="pdk-!-text-color-dark-grey"
+        pdk-text-colour="dark-grey"
+      >
+         JUDGE 
+      </dt>
+      <dd>
+         Mr Tim  Daber 
+      </dd>
+      <dt
+        class="pdk-!-text-color-dark-grey"
+        pdk-text-colour="dark-grey"
+      >
+        PROSECUTOR
+      </dt>
+      <dd>
+        Marlon Bryant
+      </dd>
+    </dl>
+  </section>
+</hearing-details>
+`;

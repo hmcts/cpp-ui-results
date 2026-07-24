@@ -1,0 +1,30 @@
+<div class="hearing-results-filter">
+  <fieldset>
+    <legend pdk-typography="heading-medium" pdk-margin-bottom="1">
+      {{ 'FILTER_BY' | translate | capitalize }}
+    </legend>
+    <div>
+      <form pdk-form #form="ngForm" novalidate>
+        <pdk-form-field label="Date" id="dateFilter">
+          <pdk-select
+            name="dateFilter"
+            [ngModel]="selectedOptions.dateFilter"
+            [options]="dateOptions()"
+            (ngModelChange)="onDateSelected({ dateFilter: $event })"
+            fullWidth
+          >
+          </pdk-select>
+        </pdk-form-field>
+
+        <pdk-form-field label="Court house" id="courtHouseFilter">
+          <cpp-organisation-unit-autosuggest
+            name="organisationUnit"
+            ngModel
+            (ngModelChange)="onCourtCentreSelected($event)"
+          >
+          </cpp-organisation-unit-autosuggest>
+        </pdk-form-field>
+      </form>
+    </div>
+  </fieldset>
+</div>

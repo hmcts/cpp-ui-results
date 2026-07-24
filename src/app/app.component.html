@@ -1,0 +1,10 @@
+<cpp-application-layout
+  [accessibilityLink]="accessibilityLink"
+  [activity]="hasApiActivity$ | async"
+  [headerNavItems]="headerNavItems"
+  [offline]="!online"
+>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</cpp-application-layout>

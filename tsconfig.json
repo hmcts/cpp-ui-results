@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["ESNEXT", "dom"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noUnusedParameters": false,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "target": "ES2022",
+    "module": "ESNEXT",
+    "types": ["node", "jest"],
+    "typeRoots": ["node_modules/@types", "src"],
+    "importHelpers": true,
+    "baseUrl": "./",
+    "paths": {
+      "@test-helpers": ["mock-test/test-helper"]
+    },
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "preserveWhitespaces": false,
+    "strictInjectionParameters": true,
+    "strictTemplates": true,
+    "strictInputTypes": false,
+    "strictSafeNavigationTypes": true
+  }
+}
